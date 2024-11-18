@@ -52,7 +52,7 @@ app.post('/send-email', (req, res) => {
         client.write('DATA\r\n');
       } else if (line.startsWith('354')) {
         client.write(`Subject: ${subject}\r\n`);
-        client.write(`From: Your Name <${USERNAME}>\r\n`);
+        client.write(`From: Send-MSG-Email2Email-Application <${USERNAME}>\r\n`);
         client.write(`To: ${recipient}\r\n`);
         client.write('\r\n'); // Blank line between headers and body
         client.write(`${message}\r\n`);
